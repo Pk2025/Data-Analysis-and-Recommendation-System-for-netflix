@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regression Results</title>
+</head>
+<body>
+    <h1>Regression Results</h1>
+    <h2>Predicted Ratings:</h2>
+    <ul>
+        {% for rating in regression_result['predicted_ratings'] %}
+            <li>{{ rating }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Actual Ratings:</h2>
+    <ul>
+        {% for rating in regression_result['actual_ratings'] %}
+            <li>{{ rating }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Go Back</a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trend Analysis</title>
+</head>
+<body>
+    <h1>Trend Analysis</h1>
+    <h2>Trends in Netflix Shows/Movies</h2>
+    <img src="data:image/png;base64,{{ trend_graph }}" alt="Trend Analysis Graph">
+    
+    <h2>Future Predictions</h2>
+    <ul>
+        {% for genre, count in future_predictions.items() %}
+            <li>{{ genre }}: {{ count }}</li>
+        {% endfor %}
+    </ul>
+    
+    <a href="/">Back to Home</a>
+</body>
+</html>

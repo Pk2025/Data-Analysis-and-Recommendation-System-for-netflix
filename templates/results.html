@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Recommendations</h1>
+        <h2>Recommended Titles:</h2>
+        <ul class="list-group">
+            {% for title in recommendations %}
+                <li class="list-group-item">{{ title }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Naive Bayes Model Accuracy: {{ naive_bayes_accuracy * 100 }}%</h2>
+        <a href="/" class="btn btn-secondary">Back</a>
+    </div>
+</body>
+</html>

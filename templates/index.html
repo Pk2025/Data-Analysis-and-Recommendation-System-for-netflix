@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Recommendation System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Netflix Recommendation System</h1>
+        
+        <!-- Recommendation Form -->
+        <section class="mt-5">
+            <h3>Get Movie/Show Recommendations</h3>
+            <form action="/recommend" method="post">
+                <div class="form-group">
+                    <label for="user_history">Enter titles you like (comma-separated):</label>
+                    <input type="text" class="form-control" id="user_history" name="user_history" placeholder="e.g., Inception, Stranger Things" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Get Recommendations</button>
+            </form>
+        </section>
+
+        <!-- Genre Prediction Form -->
+        <section class="mt-5">
+            <h3>Predict Genre</h3>
+            <form action="/predict_genre" method="post">
+                <div class="form-group">
+                    <label for="genre_title">Enter a title:</label>
+                    <input type="text" class="form-control" id="genre_title" name="title" placeholder="e.g., Inception" required>
+                </div>
+                <button type="submit" class="btn btn-secondary">Predict Genre</button>
+            </form>
+        </section>
+
+        <!-- Rating Prediction Form -->
+        <section class="mt-5">
+            <h3>Predict Rating</h3>
+            <form action="/predict_rating" method="post">
+                <div class="form-group">
+                    <label for="rating_title">Enter a title:</label>
+                    <input type="text" class="form-control" id="rating_title" name="title" placeholder="e.g., Inception" required>
+                </div>
+                <button type="submit" class="btn btn-dark">Predict Rating</button>
+            </form>
+        </section>
+
+        <!-- Country-Specific Content Prediction Form -->
+        <section class="mt-5">
+            <h3>Predict Country-Specific Content</h3>
+            <form action="/predict_country_content" method="post">
+                <div class="form-group">
+                    <label for="country">Enter a country:</label>
+                    <input type="text" class="form-control" id="country" name="country" placeholder="e.g., USA" required>
+                </div>
+                <button type="submit" class="btn btn-success">Get Country Content</button>
+            </form>
+        </section>
+
+        <!-- Trend Analysis Section -->
+        <section class="mt-5">
+            <h3>Analyze Trends in Shows/Movies</h3>
+            <form action="/analyze_trends" method="get">
+                <button type="submit" class="btn btn-info">View Trend Analysis</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
